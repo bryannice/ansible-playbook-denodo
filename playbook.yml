@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+    - name: Test ansible
+      file:
+        path: /tmp/ansible-was-here
+        state: touch
