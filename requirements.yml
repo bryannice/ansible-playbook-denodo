@@ -1,0 +1,5 @@
+---
+- src: https://github.com/bryannice/ansible-role-denodo-solution-manager.git
+  version: issue-1.bryan-nice
+  name: denodo-solutino-manager
+  scm: git
