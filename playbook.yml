@@ -2,8 +2,11 @@
 - hosts: all
   become: true
   gather_facts: true
-  tasks:
-    - name: Test ansible
-      file:
-        path: /tmp/ansible-was-here
-        state: touch
+  vars:
+    denodo_mounted_volume_path: "{{ lookup('env', 'DENODO_MOUNTED_VOLUME_PATH') | default('/data', true) }}"
+  pre_tasks:
+    - name: Gather package facts
+      package_facts:
+        manager: auto
+  roles:
+    - denodo-solution-manager
