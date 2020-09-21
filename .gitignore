@@ -76,3 +76,11 @@ template.beconf.tfvars
 *.tfstate
 *.tfstate.backup
 backend.tf
+
+# Anible
+roles/*
+temp/*
+tmp/*
+.ssh/*
+.bash_history
+.ansible/*
