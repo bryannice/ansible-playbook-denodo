@@ -41,5 +41,7 @@
     - name: Gather package facts
       package_facts:
         manager: auto
-  roles:
-    - denodo-solution-manager
+  tasks:
+    - name: Execute Denodo Solution Manager install process
+      include_role:
+        name: denodo-solution-manager
