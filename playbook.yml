@@ -10,7 +10,8 @@
         module: shell
         cmd: ansible-galaxy install -r requirements.yml
 
-- hosts: all
+- name: Apply Ansible playbook
+  hosts: all
   become: true
   gather_facts: true
   vars:
