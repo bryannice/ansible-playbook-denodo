@@ -20,6 +20,7 @@
       denodo_root_directory: "{{ lookup('env', 'DENODO_ROOT_DIRECTORY') | default('/opt/denodo', true) }}"
       denodo_installer_path: "{{ lookup('env', 'DENODO_SM_INSTALLER_PATH') | default('/data', true) }}"
       derby_port: "{{ lookup('env', 'DENODO_SM_DERBY_PATH') | default('11526', true) }}"
+      install_path: "{{ lookup('env', 'DENODO_SM_INSTALL_PATH') | default('/opt/denodo/solution_manager', true) }}"
       license_file: "{{ lookup('env', 'DENODO_SM_LICENSE_FILE') | default('', true) }}"
       licensemanager_port: "{{ lookup('env', 'DENODO_SM_LICENSEMANAGER_PORT') | default('10091', true) }}"
       locale: "{{ lookup('env', 'DENODO_SM_LOCALE') | default('us_pst', true) }}"
